@@ -1,0 +1,47 @@
+<app-titre titre= "Gestion des carnets" vignette="Formulaire ajout" ></app-titre>
+
+<section class="row">
+    <section class="col-md-6">
+        <div class ="card">
+            <div class="card-body">
+                <div class="form-group">
+                    <label>Nom</label>
+                    <input type="text" class="form-control " [(ngModel)]="form.nom" />
+                </div>
+
+                <br>
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect01">Catégories</label>
+                    <select class="form-select" id="inputGroupSelect01" [(ngModel)]="form.document">
+                        <option  selected >Choose...</option>
+                        <option *ngFor="let elem of liste"value= {{elem.nom}}>{{elem.nom}}</option>
+                    </select>
+                  </div>        
+                
+                <div class="force-group mb-3">
+                    <label>Description</label>
+                    <br>
+                    <textarea 
+                    name="form-control"
+                    [(ngModel)]="form.description">
+                    </textarea>
+                </div>
+
+                
+                    <br>
+
+                    <button class="btn btn-outline-secondary">Retour</button>
+                    <span class="float-end">
+                        <button class="btn btn-success"(click)="add()">Enregistrer</button>
+                        <button class="btn btn-secondary">Annuler</button>
+                    </span>
+                
+            </div>
+        </div>
+    </section>
+    <section class="col-mb-6">
+        Nom: {{form.nom}} <br>
+        doc: {{form.document}}<br>
+        description: {{form.description}} 
+    </section>
+</section>

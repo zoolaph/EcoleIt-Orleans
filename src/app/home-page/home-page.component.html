@@ -1,0 +1,26 @@
+<app-titre titre= "Gestion des carnet" vignette="Liste" ></app-titre>
+
+<br>
+<a class="btn btn-primary" [routerLink]="['/Carnets/Ajouter']">+ Ajouter un document</a>
+<br><br>
+<table class="table-stringed table table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nom</th>
+            <th>Description</th>
+            <th>Document</th>
+            <th>Modifier</th>
+            <th>Supprimer</th> 
+        </tr>
+    </thead>   
+    <tbody>
+        <tr *ngFor="let elem of liste; let i=index">
+            <th>{{i+1}}</th>
+            <th>{{elem.nom}}</th>
+            <th>{{elem.description}}</th>
+            <th>{{elem.document}}</th>
+            <th><button class="btn btn-warning btn-sm">Modifier</button></th>
+            <th><button class="btn btn-danger btn-sm">Supprimer</button></th>
+        </tr>
+    </tbody>

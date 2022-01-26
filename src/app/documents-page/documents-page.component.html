@@ -1,0 +1,25 @@
+<app-titre titre= "Gestion des documents" vignette="Liste" ></app-titre>
+
+<br>
+<a class="btn btn-primary" [routerLink]="['/Documents/Add']">+ Ajouter un document</a>
+<br><br>
+<table class="table-stringed table table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nom</th>
+            <th>Catégorie</th>
+            <th>Modifier</th>
+            <th>Supprimer</th> 
+        </tr>
+    </thead>   
+    <tbody>
+        <tr *ngFor="let elem of liste; let i=index">
+            <th>{{i+1}}</th>
+            <th>{{elem.nom}}</th>
+            <th>{{elem.categorie}}</th>
+            <th><button class="btn btn-warning btn-sm">Modifier</button></th>
+            <th><button class="btn btn-danger btn-sm">Supprimer</button></th>
+        </tr>
+    </tbody>
+</table>

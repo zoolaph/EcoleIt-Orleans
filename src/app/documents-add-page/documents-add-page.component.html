@@ -1,0 +1,37 @@
+<app-titre titre= "Gestion des documents" vignette="Formulaire ajout" ></app-titre>
+
+<section class="row">
+    <section class="col-md-6">
+        <div class ="card">
+            <div class="card-body">
+                <div class="form-group">
+                    <label>Nom</label>
+                    <input type="text" class="form-control " [(ngModel)]="form.nom" />
+                </div>
+                <br>
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect01">Catégories</label>
+                    <select class="form-select" id="inputGroupSelect01" [(ngModel)]="form.categorie">
+                      <option selected >Choose...</option>
+                      <option value="Romans" >Romans</option>
+                      <option value ="Essais">Essais</option>
+                      <option value="Policier">Policier</option>
+                    </select>
+                  </div>
+                    <br>
+
+                    <button class="btn btn-outline-secondary">Retour</button>
+                    <span class="float-end">
+                        <button class="btn btn-success"(click)="add()">Enregistrer</button>
+                        <button class="btn btn-secondary">Annuler</button>
+                    </span>
+                
+            </div>
+        </div>
+    </section>
+    <section class="col-mb-6">
+        Nom: {{form.nom}} <br>
+        Categorie: {{form.categorie}}
+        
+    </section>
+</section>
