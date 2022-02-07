@@ -12,8 +12,8 @@ import { FormsModule} from '@angular/forms';
 import { TableauComponent } from './tableau/tableau.component';
 import { CarnetsAddPageComponent } from './carnets-add-page/carnets-add-page.component';
 import { DocumentUpdatePageComponent } from './document-update-page/document-update-page.component';
-import { CarnetUpdatePageComponent } from './carnet-update-page/carnet-update-page.component'
-
+import { CarnetUpdatePageComponent } from './carnet-update-page/carnet-update-page.component';
+import {Ng2SearchPipeModule} from 'ng2-search-filter'
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,11 +26,13 @@ import { CarnetUpdatePageComponent } from './carnet-update-page/carnet-update-pa
     CarnetsAddPageComponent,
     DocumentUpdatePageComponent,
     CarnetUpdatePageComponent
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

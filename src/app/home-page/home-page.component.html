@@ -2,7 +2,12 @@
 
 <br>
 <a class="btn btn-primary" [routerLink]="['/Carnets/Ajouter']">+ Ajouter un document</a>
-<br><br>
+<br>
+<br>
+<form class="d-flex">
+    <input class="form-controle me-2" type="search" placeholder="Search" name ="search" [(ngModel)]="searchText" aria-label="search"/>
+</form>
+<br>
 <table class="table-stringed table table-hover">
     <thead>
         <tr>
@@ -15,7 +20,7 @@
         </tr>
     </thead>   
     <tbody>
-        <tr *ngFor="let elem of liste; let i=index">
+        <tr *ngFor="let elem of liste | filter : searchText ; let i=index ">
             <th>{{i+1}}</th>
             <th>{{elem.nom}}</th>
             <th>{{elem.description}}</th>
@@ -23,4 +28,6 @@
             <th><button class="btn btn-warning btn-sm"[routerLink]="['/Carnets/update/'+elem.id]">Modifier</button></th>
             <th><button (click)="delete(elem.id)" class="btn btn-danger btn-sm">Supprimer</button></th>
         </tr>
+
     </tbody>
+</table>

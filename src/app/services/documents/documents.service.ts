@@ -6,6 +6,7 @@ import { elementAt } from 'rxjs';
 })
 export class DocumentsService {
   liste: any;
+  searchText :any;
   constructor() {
     this.liste = [
       

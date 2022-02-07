@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class CarnetService {
   liste:any;
+  searchText:any
 
   constructor() { 
     this.liste = [

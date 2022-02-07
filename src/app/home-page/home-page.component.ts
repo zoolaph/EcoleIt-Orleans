@@ -7,6 +7,7 @@ import {CarnetService} from '../services/carnets/carnet.service';
 })
 export class HomePageComponent implements OnInit {
   liste:any
+  searchText:any
   constructor(public carnetService: CarnetService) { }
 
   ngOnInit(): void {

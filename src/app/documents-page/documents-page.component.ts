@@ -8,6 +8,7 @@ import {DocumentsService} from '../services/documents/documents.service';
 })
 export class DocumentsPageComponent implements OnInit {
   liste:any;
+  searchText:any;
   constructor(public documentsService: DocumentsService) { }
 
   ngOnInit(): void {
