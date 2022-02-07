@@ -13,5 +13,7 @@ export class DocumentsPageComponent implements OnInit {
   ngOnInit(): void {
     this.liste = this.documentsService.getListe();
   }
-
+  delete(id:number){
+    this.documentsService.deleteDocument(id);
+  }
 }

@@ -14,7 +14,9 @@ export class CarnetService {
     ];
   }
   getListe(){
-    return this.liste;
+    let res = localStorage.getItem("Carnet")
+    if( res != null )this.liste =JSON.parse(res)
+    return this.liste
   }
   generateId(): number{
     return Date.now();
@@ -23,5 +25,31 @@ export class CarnetService {
     const id = this.generateId();
     form.id = id;
     this.liste.push(form);
+    localStorage.setItem('Carnet',JSON.stringify(this.liste));
+  }
+
+  getCarnetById(id:  number):any{
+  return this.liste.find((elem:any) => elem.id == id)
+  }
+  updateCarnet(form:any):void{
+    const id = form.id;
+    let elem = this.getCarnetById(id);
+    if(!elem.id) alert("Erreur")
+    else{ 
+      let indice = this.liste.indexOf(elem);
+      if(indice > -1) this.liste[indice] =form
+      localStorage.setItem('Carnet',JSON.stringify(this.liste));
+      this.getListe()
+    }
+  }
+  deleteCarnet(id:number): void{
+  let elem = this.getCarnetById(id);
+  if(!elem.id) alert("Erreur")
+  else{
+    let indice = this.liste.indexOf(elem);
+    this.liste.splice(indice,1)
+    localStorage.setItem('Carnet',JSON.stringify(this.liste));
+    this.getListe()
+  }
   }
 }

@@ -13,4 +13,8 @@ export class HomePageComponent implements OnInit {
     this.liste = this.carnetService.getListe();
   }
 
+  delete(id:number){
+    this.carnetService.deleteCarnet(id);
+  }
 }
+

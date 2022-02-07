@@ -18,8 +18,8 @@
             <th>{{i+1}}</th>
             <th>{{elem.nom}}</th>
             <th>{{elem.categorie}}</th>
-            <th><button class="btn btn-warning btn-sm">Modifier</button></th>
-            <th><button class="btn btn-danger btn-sm">Supprimer</button></th>
+            <th><button class="btn btn-warning btn-sm"[routerLink]="['/Documents/update/'+elem.id]">Modifier</button></th>
+            <th><button (click)="delete(elem.id)" class="btn btn-danger btn-sm">Supprimer</button></th>
         </tr>
     </tbody>
 </table>

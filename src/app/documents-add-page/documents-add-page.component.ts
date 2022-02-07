@@ -17,6 +17,7 @@ export class DocumentsAddPageComponent implements OnInit {
     }
   }
 
+  
   add() :void{
     this.documentsService.addDocument(this.form);
     this.router.navigate(['/Documents']);

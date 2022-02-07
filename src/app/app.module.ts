@@ -10,7 +10,9 @@ import { DocumentsPageComponent } from './documents-page/documents-page.componen
 import { DocumentsAddPageComponent } from './documents-add-page/documents-add-page.component';
 import { FormsModule} from '@angular/forms';
 import { TableauComponent } from './tableau/tableau.component';
-import { CarnetsAddPageComponent } from './carnets-add-page/carnets-add-page.component'
+import { CarnetsAddPageComponent } from './carnets-add-page/carnets-add-page.component';
+import { DocumentUpdatePageComponent } from './document-update-page/document-update-page.component';
+import { CarnetUpdatePageComponent } from './carnet-update-page/carnet-update-page.component'
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { CarnetsAddPageComponent } from './carnets-add-page/carnets-add-page.com
     DocumentsPageComponent,
     DocumentsAddPageComponent,
     TableauComponent,
-    CarnetsAddPageComponent
+    CarnetsAddPageComponent,
+    DocumentUpdatePageComponent,
+    CarnetUpdatePageComponent
   ],
   imports: [
     BrowserModule,

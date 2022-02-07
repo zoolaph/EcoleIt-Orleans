@@ -20,7 +20,7 @@
             <th>{{elem.nom}}</th>
             <th>{{elem.description}}</th>
             <th>{{elem.document}}</th>
-            <th><button class="btn btn-warning btn-sm">Modifier</button></th>
-            <th><button class="btn btn-danger btn-sm">Supprimer</button></th>
+            <th><button class="btn btn-warning btn-sm"[routerLink]="['/Carnets/update/'+elem.id]">Modifier</button></th>
+            <th><button (click)="delete(elem.id)" class="btn btn-danger btn-sm">Supprimer</button></th>
         </tr>
     </tbody>
